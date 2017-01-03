@@ -51,28 +51,136 @@
 						<a>View all items</a>
 						<h2>Top Selling Brands</h2>
 					</div>	
-					<div class="img-featured-items row small-up-4">
+					<div class="img-featured-items row small-up-5">
 						<div class="column">
 							<img src="style/chaussure1.jpg">
-							<div>Gucci Shoes</div>
+							<div class="marques">Gucci Shoes</div>
 						</div>
 						<div class="column">
-						<img src="style/chaussure2.jpg">
-						<div>Nike Sports Shoes</div>
+							<img src="style/chaussure2.jpg">
+							<div class="marques">Nike Sports Shoes</div>
 						</div>
 						<div class="column">
-						<img src="style/chaussure3.jpg">
-						<div>Nike Golf Cap</div>
+							<img src="style/chaussure3.jpg">
+							<div class="marques">Nike Golf Cap</div>
 						</div>
 						<div class="column">
 							<img src="style/chaussure4.jpg">
-							<div>Nike Golf Cap</div>
+							<div class="marques">Nike Golf Cap</div>
 						</div>
+						<div class="column"><img src="style/gucci.jpg"></div>
 					</div>
-					<div class="img-Brands"></div>
-
 				</div>
+
 			</div>
+			<div class="conteneur-items-globale">
+				<div class="conteneur-items">
+					<div class="titres">
+						<h2>Popular categories</h2>
+						<h2>Top Selling items</h2>
+						<a>View all items</a>
+					</div>
+
+					<div class="right-column">
+						<div class="categories">
+							<a href="#">
+								<div class="button-categories">
+									<p class="choix">
+										<span>WOMEN</span> SHOES STARTS FROM 
+									</p>
+								</div>
+							</a>
+							<div class="first-triangle"></div>
+							<div class="seconde-triangle"></div>
+						</div>
+						<div class="categories">
+							<a href="#">
+								<div class="button-categories">
+									<p class="choix">
+										<span>MEN</span> DRESS SHOES STARTS FROM  
+									</p>
+								</div>
+							</a>
+							<div class="first-triangle"></div>
+							<div class="seconde-triangle"></div>
+						</div>
+						<div class="categories">
+							<a href="#">
+								<div class="button-categories">
+									<p class="choix">
+										<span>KIDS</span> ACCESSORIES STARTS FROM 
+									</p>
+								</div>
+							</a>
+							<div class="first-triangle"></div>
+							<div class="seconde-triangle"></div>
+						</div>
+						<div class="categories">
+							<a href="#">
+								<div class="button-categories">
+									<p class="choix">
+										<span>MEN</span> SUITS STARTS FROM 
+									</p>
+								</div>
+								<div class="price">$50</div>
+							</a>
+							<div class="first-triangle"></div>
+							<div class="seconde-triangle"></div>
+						</div>
+						<h2>What's hot</h2>
+						<div class="stores">
+
+							<div class="button-stores">
+								<p>WOMEN STORE</p>
+								<p>GARMENTS & ACCESSORIES</p>
+							</div>
+							<div class="price-stores">
+								<p>Starts from</p>
+								<p>45</p>
+							</div>
+							<div class="triangle a"></div>
+							<div class="triangle b"></div>
+							<div class="triangle c"></div>
+							<div class="triangle d"></div>
+							<div class="triangle e"></div>
+							<div class="triangle f"></div>
+							<div class="triangle g"></div>
+							<div class="triangle h"></div>
+							<div class="triangle i"></div>
+							<div class="triangle j"></div>
+							<div class="triangle k"></div>
+
+						</div>
+						<div class="stores">
+
+							<div class="button-stores">
+								<p>MAN STORE</p>
+								<p>GARMENTS & ACCESSORIES</p>
+							</div>
+							<div class="price-stores">
+								<p>Starts from</p>
+								<p>45</p>
+							</div>
+							<div class="triangle a"></div>
+							<div class="triangle b"></div>
+							<div class="triangle c"></div>
+							<div class="triangle d"></div>
+							<div class="triangle e"></div>
+							<div class="triangle f"></div>
+							<div class="triangle g"></div>
+							<div class="triangle h"></div>
+							<div class="triangle i"></div>
+							<div class="triangle j"></div>
+							<div class="triangle k"></div>
+
+						</div>
+
+					</div>
+				</div>
+
+			</div>
+		</div>
+
 	</body>
 </html>  
 
