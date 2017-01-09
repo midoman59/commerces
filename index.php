@@ -35,7 +35,8 @@
 			</div>
 			<div class="conteneur-menu-bas">
 				<div class="menu-bas">
-					<ul>
+					<ul> 
+						
 						<li><a>Homme</a></li>
 						<li><a>Kids</a></li>
 						<li><a>Women</a></li>
