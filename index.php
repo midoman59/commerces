@@ -36,16 +36,9 @@
 			<div class="conteneur-menu-bas">
 				<div class="menu-bas">
 					<ul> 
-						
-						<li><a>Homme</a></li>
-						<li><a>Kids</a></li>
-						<li><a>Women</a></li>
-						<li><a>Brands</a></li>
-						<li><a>Blog</a></li>
-						<li><a>Community</a></li>
-						<li><a>Delivery</a></li>
-						<li><a>Stores</a></li>
-						<li><a>Contacts</a></li>
+						<?php
+						include_once 'menu.php';
+						?>
 					</ul>
 				</div>	
 			</div>
