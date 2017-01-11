@@ -18,7 +18,7 @@ mysqli_query($link, "SET NAMES UTF8");
 
 if (isset($_POST['toto'])) {
 	mysqli_query($link, "INSERT INTO `menu` (titre) VALUES ('".$_POST['toto']."')" );
-	header('location:gestionMenu.php');
+	header('location:gestionMenu.php?page=menuHaut');
 }
 
 mysqli_close($link);
