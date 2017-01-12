@@ -25,7 +25,9 @@
 			.conteneur-admin .column:nth-child(2) li div{display: inline-block;text-align: center;margin-right: 50px;}
 			.conteneur-admin .column:nth-child(2) li div:first-child{width: 100px;height: 30px;background-color: grey;border: 1px solid gray;}
 			ul{list-style: none;}
+			
 			.conteneur-admin .column:nth-child(3) ul li ul li{display: inline-block;width: 33%;}
+			.conteneur-admin .column:nth-child(3) ul li:hover {background-color: transparent;}
 			.conteneur-admin .column:nth-child(3) ul li ul:hover li:first-child{background-color: #22bb5b;color: wheat;}
 	
 
