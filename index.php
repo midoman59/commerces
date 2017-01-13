@@ -28,7 +28,7 @@
 					<li><a><i class="fa fa-star" aria-hidden="true"></i></a></li>
 					<li><a><i class="fa fa-heart" aria-hidden="true"></i></a></li>
 					<li><a><i class="fa fa-shopping-cart" aria-hidden="true"></i></a></li>
-					<li><a><i class="fa fa-lock" aria-hidden="true"></i></a></li>
+					<li><a href><i class="fa fa-lock" aria-hidden="true"></i></a></li>
 				</ul>
 			</div>
 			<div class="slide">	
