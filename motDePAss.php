@@ -1,26 +1,35 @@
 <?php
 //on teste si le visiteur a soumis le formulaire de connexion
-if (isset($_POST['connexion'])) {
-	if ((isset($_POST['mail']) && !empty($_POST['mail'])) && (isset($_POST['password']) && !empty($_POST['password']))) {
+if (isset($_POST['motDePass'])) {
+	if ((isset($_POST['mail']) && !empty($_POST['mail']))) {
 		$link = mysqli_connect("localhost", "root", "", "formation")
 				or die("Impossible de se connecter : " . mysql_error());
 		mysqli_query($link, "SET NAMES UTF8");
-		$resultat = mysqli_query($link, 'SELECT * FROM `logintableuser` WHERE `mail`="' . $_POST['mail'] . '" AND `password`="' .(md5($_POST['password'])). '"');
-		$data=  mysqli_fetch_assoc($resultat);
-		mysqli_close($link);
+		$resultat = mysqli_query($link, 'SELECT * FROM `logintableuser` WHERE `mail`="' . $_POST['mail'] . '"');
+		$data = mysqli_fetch_assoc($resultat);
 		
+
 		//si on obtient une seul répense,alors l'utilisateur est un membre
-		if (mysqli_num_rows($resultat)==1) {
-			session_start();
-			$_SESSION['mail'] = $_POST['mail'];
-			header('location:gestionMenu.php');
-			exit();
+		if (mysqli_num_rows($resultat) == 1) {
+
+			$newMDP =substr(md5(time()), 0, 6);
+			$newMdpH= md5($newMDP);
+			$req='UPDATE `logintableuser` SET `password`="' . $newMdpH . '" WHERE `mail`="' . $_POST['mail'] . '"';
+			$modif = mysqli_query($link,$req);
+			if ($modif) {
+
+				mail($_POST['mail'], "recuperation Mot de pass", "Votre nouveau Mot de Pass est : " . $newMDP);
+			}
+			else
+			{
+				echo"erreur".  mysqli_error($link);
+			}
 		}
 
 		//si on ne trouve aucune répense,le visiteur s'est trompé soit dans son login
 		//soit dans son mot de pass
 		elseif (mysqli_num_rows($resultat) == 0) {
-			$erreur = 'Compte non reconnu.';  
+			$erreur = 'Compte non reconnu.';
 		}
 		// si non il y a deux personnes dans la meme base de donnés
 		//avec les memes identifiants et mot de passe
@@ -31,9 +40,8 @@ if (isset($_POST['connexion'])) {
 		$erreur = 'Au moins un des champs est vide.';
 	}
 }
-?>
-  
 
+?>
 
 <!DOCTYPE html>
 <html>
@@ -60,23 +68,20 @@ if (isset($_POST['connexion'])) {
 	</head>
 	<body>
 		<div class="conteneur">
-			<h2>Accés membre</h2> 
-			<form action="connexion.php" method="post">
+			<h2>MOT DE PASS OUBLIE</h2> 
+			<form action="motDePass.php" method="post">
 				<label for="mail">Votre Mail : </label><input type="text" name="mail" value="<?php if (isset($_POST['login'])) echo htmlentities(trim($_POST['mail'])); ?>"/>
-				<label for="password">Votre Password : </label><input type="text" name="password" value="<?php if (isset($_POST['pass'])) echo htmlentities(trim($_POST['pass'])); ?>"/>
-				<input type="submit" name="connexion" value="connexion"/>
-				<a href="motDePass.php">Mot de pass oublié ?</a> 
+
+				<input type="submit" name="motDePass" value="envoyer"/>
+
 			</form>
-			<p>Pas encore inscrit?</p>
-			<form action="inscription.php">
-				<input type="submit" value="Inscrivez vous gratuitement"/>
-			</form>
-		
-			
-			<?php
-			if (isset($erreur))
-				echo '<br /><br />', $erreur;
-			?>
+
+
+
+<?php
+if (isset($erreur))
+	echo '<br /><br />', $erreur;
+?>
 		</div>
 	</body>
 </html> 

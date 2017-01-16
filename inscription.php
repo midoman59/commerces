@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>TODO supply a title</title>
+		<title>INSCRIPTION</title>
 		<meta charset="utf-8">
 		<meta http-equiv="x-ua-compatible" content="ie=edge">
 		<link type="text/css" rel="stylesheet" href="style/jquery-ui.css" />
@@ -23,7 +23,7 @@
 	</head>
 	<body>
 		<div class="conteneur">
-			<h2>Accés membre</h2> 
+			<h2>INSCRIPTION</h2> 
 			<form action="submit" method="post">
 				<label for="prenom">Votre prenom : </label><input type="text" name="prenom"/>
 				<label for="nom">Votre nom : </label><input type="text" name="nom"/>
