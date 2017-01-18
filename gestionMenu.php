@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>TODO supply a title</title>
+		<title>Administration du site</title>
 		<meta charset="utf-8">
 		<meta http-equiv="x-ua-compatible" content="ie=edge">
 		<link type="text/css" rel="stylesheet" href="style/jquery-ui.css" />
@@ -55,7 +55,7 @@
 				if (isset($_GET['page'])) {
 					switch ($_GET['page']) {
 						case 'menuHaut':
-							include('menuHaut.php');
+							include('./vues/vueMenuHaut.php');
 							break;
 						case 'slider':
 							include_once 'slider.php';
@@ -75,6 +75,10 @@
 						default :
 							echo 'cest lahhess';
 					}
+				}
+				if(isset($_GET['editer']))
+				{
+					include_once './controleurs/controleurMenuHaut.php';
 				}
 				?>
 			</div>
