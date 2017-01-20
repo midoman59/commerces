@@ -15,6 +15,7 @@
 		<script type="text/javascript" src="js/jquery-3.1.1.js" ></script>
 		<script type="text/javascript" src="js/jquery-ui.js" ></script>
 		<style>
+			
 			.conteneur-admin .column:first-child{height: 100px;background-color: rgba(0,0,0,0.5);text-align: center;}
 			.conteneur-admin .column:first-child h1{line-height: 100px;}
 			.conteneur-admin .column:nth-child(2){padding-left: 0px;}
