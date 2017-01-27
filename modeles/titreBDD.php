@@ -4,13 +4,15 @@ $link = mysqli_connect("localhost", "root", "", "formation")
 		or die("Impossible de se connecter : " . mysql_error());
 mysqli_query($link, "SET NAMES UTF8");
 
+
+
+//fonction de manipulation de titre
 function recupTitres() {
 	global $link;
 	$resultat = mysqli_query($link, 'SELECT * FROM `menu`');
 	$titres = [];
 	while ($data = mysqli_fetch_assoc($resultat)) {
-		$titres[$data['id']] = $data['titre'];
-		
+		$titres[$data['id']] = $data['titre'];		
 	}
 	return $titres;
 	
@@ -33,3 +35,5 @@ function suprimerTitre($id) {
 	$query="DELETE FROM `menu` WHERE `id`='" .$id ."'";
 	mysqli_query($link, $query);
 }
+
+//function manipulation de produits

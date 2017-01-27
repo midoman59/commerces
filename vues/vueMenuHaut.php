@@ -1,6 +1,6 @@
 <?php
 include_once('/modeles/titreBDD.php');
-$titres = recupTitres($link);
+$titres = recupTitres();
 ?>
 <table>
 	<thead>
